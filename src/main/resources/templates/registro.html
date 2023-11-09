@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link th:href="@{/css/bootstrap.css}" rel="stylesheet" href="../statics/css/bootstrap.css" />
+	<title>Inicio de sesión</title>
+</head>
+<script th:src="@{/js/jquery-3.6.4.js}" src="../statics/js/jquery-3.6.4.js"></script>
+<script th:src="@{/js/bootstrap.js}" src="../statics/js/bootstrap.js"></script>
+
+<body style="background:#000; ">
+
+	<div class="container" style="background:#fff; width: 460px; min-height:100vh;">
+
+		<div style="padding:20px 0px;margin:auto; width: 200px;">
+			<img width="150px" th:src="@{/images/logo1.png}" src="../statics/images/logo1.png" alt="">
+		</div>
+		<div class="row m-3">
+			<div>
+				<h3 class="pb-2">Regístrate</h3>
+				<form th:action="@{/registro}" method="post" th:object="${usuario}">
+					<div id="error" class="errorblock" th:if="${errors != null}">
+
+						<div class="alert alert-danger">
+							<ul>
+								<li id="err" th:each="err : ${errors}" th:text="${err}">Input is incorrect</li>
+							</ul>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label" for="nombre">Nombre </label> <input id="nombre" type="text"
+							class="form-control" th:field="*{nombre}" required autofocus="autofocus">
+					</div>
+
+					<div class="form-group">
+						<label class="control-label" for="apellido">Apellido</label> <input id="apellido"
+							class="form-control" th:field="*{apellido}" required autofocus="autofocus">
+					</div>
+
+					<div class="form-group">
+						<label class="control-label" for="email">Email </label> <input id="email" type="email"
+							class="form-control" th:field="*{email}" required autofocus="autofocus">
+					</div>
+
+					<div class="form-group">
+						<label class="control-label" for="password">Password </label> <input type="password"
+							id="password" class="form-control" th:field="*{password}" required autofocus="autofocus">
+					</div>
+					<br />
+					<div class="form-group">
+						<div class="row  m-4 mt-2">
+							<button type="submit" id="btsave"
+								class="mb-3 form-control btn btn-primary">Registrar</button>
+							<span>Si estas registrado <a th:href="@{/login}">inicia sesión aqui</a></span>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>

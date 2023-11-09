@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link th:href="@{/css/bootstrap.css}" rel="stylesheet" href="../statics/css/bootstrap.css" />
+  <title>Mis pedidos</title>
+</head>
+<script th:src="@{/js/jquery-3.6.4.js}" src="../statics/js/jquery-3.6.4.js"></script>
+<script th:src="@{/js/bootstrap.js}" src="../statics/js/bootstrap.js"></script>
+
+<body style="background:#000; ">
+
+  <div class="container" style="background:#fff; width: 460px; min-height:100vh;">
+
+    <div class="row  mb-2 p-2 bg-success">
+      <div class="col-1 ">
+        <a th:href="@{/}">
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20	" fill="#fff" class="bi bi-arrow-left"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+          </svg></a>
+      </div>
+      <div class="col-10">
+        <div class="text-white text-center">
+          <h4>Pedidos</h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="">
+      <div class="row">
+        <div class="col-4 "> <img width="150" th:src="@{/images/product1.png}" src="../statics/images/product1.png"
+            alt="">
+        </div>
+        <div class="col-5 ms-2">
+          <span>Arroz langostino</span><br />
+          <span>Limonada de coco</span>
+
+        </div>
+        <div class="col-2 ms-2">
+          <div class="row">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+              class="bi bi-check-circle" viewBox="0 0 16 16">
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+              <path
+                d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
+            </svg>
+            <span> $3.667 </span>
+            </row>
+          </div>
+
+        </div>
+
+        <hr class="mt-2" />
+      </div>
+
+      <div class="">
+        <div class="row">
+          <div class="col-4 "> <img width="150" th:src="@{/images/product1.png}" src="../statics/images/product1.png"
+              alt="">
+          </div>
+          <div class="col-5 ms-2">
+            <span>Arroz langostino</span><br />
+            <span>Limonada de coco</span>
+
+          </div>
+          <div class="col-2 ms-2">
+            <div class="row">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                class="bi bi-check-circle" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                <path
+                  d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
+              </svg>
+              <span> $3.667 </span>
+              </row>
+            </div>
+
+          </div>
+
+          <hr class="mt-2" />
+        </div>
+      </div>
+
+</body>
+
+</html>

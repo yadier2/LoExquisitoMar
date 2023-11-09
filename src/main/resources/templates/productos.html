@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link th:href="@{/css/bootstrap.css}" rel="stylesheet" href="../statics/css/bootstrap.css" />
+    <title>Browser</title>
+</head>
+<script th:src="@{/js/jquery-3.6.4.js}" src="../statics/js/jquery-3.6.4.js"></script>
+<script th:src="@{/js/bootstrap.js}" src="../statics/js/bootstrap.js"></script>
+
+<body>
+
+    <div class="row mb-3">
+        <div class="col">
+            <h5 class="mb-0">Popular</h5>
+        </div>
+        <div class="col-auto">
+            <a href="" class="link text-color-theme">View All <i class="bi bi-chevron-right"></i></a>
+        </div>
+    </div>
+    <div th:each="product : ${products}" class="row">
+        <div class="col-6 col-md-4 col-lg-3">
+            <div class="card shadow-sm product mb-4">
+                <div class="card-body">
+                    <figure class="text-center">
+                        <img src="assets/img/product1.png" alt="">
+                    </figure>
+                    <p class="mb-1">
+                        <small class="text-opac">Fresh</small>
+                        <small class="float-end"><span class="text-opac">4.5</span> <i
+                                class="bi bi-star-fill text-warning"></i></small>
+                    </p>
+                    <a href="product.html" class="text-normal">
+                        <h6 class="text-color-theme">Red Apple</h6>
+                    </a>
+                    <div class="row">
+                        <div class="col">
+                            <p class="mb-0">$12.00<br><small class="text-opac">per 1 kg</small></p>
+                        </div>
+                        <div class="col-auto">
+                            <button class="btn btn-sm avatar avatar-30 p-0 rounded-circle shadow btn-gradient"
+                                data-bs-toggle="modal" data-bs-target="#addproductcart">
+                                <i class="bi bi-plus size-22"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
